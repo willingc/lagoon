@@ -1,0 +1,64 @@
+# This GitHub Action creates the dinghy digest and publishes them every day.
+
+name: "Daily activity digests"
+
+on:
+  push:
+  schedule:
+    # 1pm UTC, so 8/9am Eastern.
+    # https://crontab.guru/#02_13_*_*_*
+    - cron: "02 13 * * *"
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  digest:
+    name: "Daily digest"
+    runs-on: ubuntu-latest
+    environment: github-pages
+
+    steps:
+      - name: "Check out the repo"
+        uses: actions/checkout@v4
+
+      - name: "Install Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: "Install dinghy"
+        run: |
+          python -m pip install dinghy
+
+      - name: "Run dinghy"
+        env:
+          # A personal access token with public_repo permission.
+          # https://github.com/settings/tokens/941466930
+          GITHUB_TOKEN: ${{ secrets.DINGHY_ACCESS_TOKEN }}
+        run: |
+          python -m dinghy
+
+      - name: "Setup Pages"
+        uses: actions/configure-pages@v5
+
+      - name: "Upload artifact"
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+
+      - name: "Deploy to GitHub Pages"
+        uses: actions/deploy-pages@v4
