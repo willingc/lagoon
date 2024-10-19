@@ -1,0 +1,13 @@
+[project]
+authors = ["Carol Willing <carolcode@willingconsulting.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "dinghy-napari"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+dinghy = ">=1.1.0,<2"
