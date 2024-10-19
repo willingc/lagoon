@@ -1,9 +1,9 @@
 digests:
   - digest: pyopensci-org.html
-    title: pyOpenSci org last day
     since: 1 day
     items:
-      - https://github.com/orgs/pyOpenSci
+      - search: org:pyopensci is:pr
+        title: pyOpenSci prs last day
   - digest: pyopensci.html
     title: pyOpenSci website, lessons, packaging guide last week
     since: 1 week
