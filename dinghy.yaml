@@ -3,7 +3,7 @@ digests:
     title: pyOpenSci org last day
     since: 1 day
     items:
-      - https://github.com/pyOpenSci
+      - https://github.com/orgs/pyOpenSci
   - digest: pyopensci.html
     title: pyOpenSci website, lessons, packaging guide last week
     since: 1 week
