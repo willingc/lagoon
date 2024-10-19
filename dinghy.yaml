@@ -4,6 +4,8 @@ digests:
     items:
       - search: org:pyopensci is:pr
         title: pyOpenSci prs last day
+      - search: org:pyopensci is:issue
+        title: pyOpenSci issues last day
   - digest: pyopensci.html
     title: pyOpenSci website, lessons, packaging guide last week
     since: 1 week
