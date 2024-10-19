@@ -1,0 +1,23 @@
+digests:
+  - digest: pyopensci.html
+    title: pyOpenSci last week
+    since: 1 week
+    items:
+      - https://github.com/pyopensci/lessons/pulls
+      - https://github.com/pyopensci/python-package-guide/pulls
+      - https://github.com/pyopensci/pyopensci.github.io/pulls
+
+  - digest: python.html
+    title: python last week
+    since: 1 week
+    items:
+      - https://github.com/python/peps/pulls
+      - https://github.com/python/cpython/pulls
+      - https://github.com/python/devguide/pulls
+
+  - digest: napari.html
+    title: napari last week
+    since: 1 week
+    items:
+      - https://github.com/napari/napari
+
