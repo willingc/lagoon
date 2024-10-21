@@ -31,5 +31,4 @@ digests:
   - digest: asyncio-day.html
     title: asyncio activity since yesterday
     since: 1 day
-    items:
-      - https://github.com/python/cpython/labels/topic-asyncio
+    search: org:python repo:cpython is:pr label:topic-asyncio
