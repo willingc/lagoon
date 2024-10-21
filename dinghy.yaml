@@ -33,3 +33,11 @@ digests:
     since: 1 day
     items:
       - search: org:python repo:cpython is:pr label:topic-asyncio
+      - search: org:python repo:cpython is:issue label:topic-asyncio
+
+  - digest: asyncio-week.html
+    title: asyncio activity last week
+    since: 1 week
+    items:
+      - search: org:python repo:cpython is:pr label:topic-asyncio
+      - search: org:python repo:cpython is:issue label:topic-asyncio
