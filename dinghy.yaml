@@ -28,3 +28,10 @@ digests:
     items:
       - https://github.com/napari/napari
 
+  - digest: asyncio-day.html
+    title: asyncio activity since yesterday
+    since: 1 day
+    items:
+      - https://github.com/python/cpython/pulls?q=is%3Aopen+is%3Apr+is%3Apr+label%3Atopic-asyncio
+      - https://github.com/python/cpython/issues?q=is%3Aopen+is%3Aissue+label%3Atopic-asyncio
+
